@@ -63,7 +63,7 @@ for key in gameBoard:
 
 def game():
     print(gameTitle)
-    print("\033[4mTip: Use the numpad, on the right side of your keyboard, as a guide to play.\033[0m\n")
+    print("\033[4mTip: Use the numpad, on the right side of your keyboard, as a guide layout to play.\033[0m\n")
 
     turn = 'X'
     count = 0
@@ -90,7 +90,7 @@ def game():
                         EXITCountdown(int(timer))
                 else:
                     print("\033[4mERROR!\033[0m" + ": Alphabetical inputs not allowed.\n")
-            if len(move) > 1:
+            if move.isdigit() and len(move) > 1:
                 print("\033[4mERROR!\033[0m" + ": Input length is limited to 1 character only.\n")
 
             move = input("Move to which place?: > ")
